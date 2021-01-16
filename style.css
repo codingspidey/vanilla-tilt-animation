@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+  }
+  
+  .image-link {
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    z-index: 999;
+    background: rgb(0, 0, 0, 0.5);
+  }
+  .image-link > a {
+    text-decoration: none;
+    font-weight: 600;
+    font-family: "Courier New", Courier, monospace;
+    color: #ffffff;
+    padding: 10px 10px;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .main-container {
+    position: relative;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0px;
+    transform-style: preserve-3d;
+  }
+  
+  @media (max-width: 991px) {
+    .main-container {
+      width: 95%;
+      flex-direction: column;
+    }
+  }
+  
+  .main-container .box {
+    position: relative;
+    width: clamp(18rem, 34vw, 25rem);
+    height: 400px;
+    margin: 60px 0px;
+    background: #030303;
+    transform-style: preserve-3d;
+  }
+  
+  .main-container .box:hover {
+    box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.2);
+  }
+  
+  .main-container .box .img-box {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .main-container .box .img-box > img {
+    width: 100%;
+   
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .main-container .box .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    right: 50px;
+    background: #ffffff;
+    transform: translateZ(20px) scaleY(0);
+    padding: 15px 25px;
+    transform-origin: top;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+  }
+  .main-container .box .text-box h2 {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin: 0px 0px 5px;
+  }
+  .main-container .box .text-box p {
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  }
+  
+  .main-container .box:hover .text-box {
+    transform: translateZ(50px) scaleY(1);
+  }
+  h2{
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+  }
